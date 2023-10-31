@@ -1,0 +1,36 @@
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  height: 5em;
+  align-items: center;
+  background-color: #171e35;
+  padding: 0 2em 0 2em;
+  overflow: hidden;
+}
+
+.dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: white;
+  height: 100%;
+}
+
+.underline {
+  background-image: linear-gradient(white, white);
+  background-size: 0% 0.09rem;
+  background-repeat: no-repeat;
+  font-size: medium;
+  letter-spacing: 1px;
+  padding-bottom: 6.5px;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+
+li:hover .underline {
+  background-size: 100% 0.09rem;
+  padding-bottom: 6.5px;
+  cursor: pointer;
+}
