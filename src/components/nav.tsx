@@ -1,49 +1,89 @@
 import React from "react";
 import "./nav.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
+  const location = useLocation();
+
   return (
     <>
-      <nav className="nav">
-        <span>
-          <img
-            src="../../public/icon.svg"
-            alt="not found"
-            style={{ width: "3em" }}
-          />
-        </span>
-        <i className="logoWebComponent" color="light"></i>
-        <ul className="nav">
-          <li className="dropdown">
-            <Link to="/home" className="dropbtn">
-              <button className="dropbtn">
-                <label className="underline">Home</label>
-              </button>
-            </Link>
-          </li>
-          <li className="dropdown">
-            <Link to="/about" className="dropbtn">
-              <button className="dropbtn">
-                <label className="underline">About</label>
-              </button>
-            </Link>
-          </li>
-          <li className="dropdown">
-            <Link to="/members" className="dropbtn">
-              <button className="dropbtn">
-                <label className="underline">Members</label>
-              </button>
-            </Link>
-          </li>
-          <li className="dropdown">
-            <Link to="/events" className="dropbtn">
-              <button className="dropbtn">
-                <label className="underline">Events</label>
-              </button>
-            </Link>
-          </li>
-        </ul>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+        <div className="container gap-4">
+          <div className="d-flex justify-content-between w-100">
+            <img
+              src="../../public/Progra.png"
+              alt="not availabe"
+              width="45em"
+            />
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav gap-3">
+              <li className="nav-item">
+                <button className="dropbtn">
+                  <Link to="/home">
+                    <label
+                      className={`underline  ${
+                        location.pathname === "/home" ? "sethover" : ""
+                      }`}
+                    >
+                      Home
+                    </label>
+                  </Link>
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="dropbtn">
+                  <Link to="/events">
+                    <label
+                      className={`underline  ${
+                        location.pathname === "/events" ? "sethover" : ""
+                      }`}
+                    >
+                      Events
+                    </label>
+                  </Link>
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="dropbtn">
+                  <Link to="/members">
+                    <label
+                      className={`underline  ${
+                        location.pathname === "/members" ? "sethover" : ""
+                      }`}
+                    >
+                      Members
+                    </label>
+                  </Link>
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="dropbtn">
+                  <Link to="/about">
+                    <label
+                      className={`underline  ${
+                        location.pathname === "/about" ? "sethover" : ""
+                      }`}
+                    >
+                      About
+                    </label>
+                  </Link>
+                </button>
+              </li>
+            </div>
+          </div>
+        </div>
       </nav>
     </>
   );
