@@ -9,7 +9,7 @@ import Card from "../components/Card";
 import CardData from "../components/CardData";
 const Members = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 })
+    AOS.init()
   }, [])
   return (
     <>
@@ -19,9 +19,9 @@ const Members = () => {
         <hr className="line"/>
       </section>
       <section className="members-card m-5">
-        <div data-aos='fade-up'>
+        <div data-aos='fade-up' data-aos-duration='1000'>
           <div className="row">
-            <Card details={{CardData}}></Card>
+            <Card details={CardData}></Card>
               
           </div>
         </div>

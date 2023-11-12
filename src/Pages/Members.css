@@ -5,3 +5,7 @@
 .line{
     height: 5px;
 }
+
+  [data-aos].animated {
+    visibility: visible;
+  }
