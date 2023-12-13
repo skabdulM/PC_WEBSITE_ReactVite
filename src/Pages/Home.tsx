@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      HOme page
+      <section className="section1">
+        <img src="/Progra.png" alt="" />
+      </section>
     </>
   );
 };

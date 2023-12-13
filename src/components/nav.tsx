@@ -10,11 +10,7 @@ const NavBar: React.FC = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-4">
         <div className="container gap-4">
           <div className="d-flex justify-content-between w-100">
-            <img
-              src="../../public/Progra.png"
-              alt="not availabe"
-              width="45em"
-            />
+            <img src="/Progra.png" alt="not availabe" width="45em" />
             <button
               className="navbar-toggler"
               type="button"
